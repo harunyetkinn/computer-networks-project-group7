@@ -25,4 +25,4 @@ Technologies
 
 Demo
 Open `index.html` in your browser to view the project.
-selam
+
