@@ -1511,27 +1511,123 @@ window.addEventListener('resize', () => { initCanvas(); initTopoloji(); });
 const sorular = [
   {
     soru: "Which type of delay occurs when a packet waits in the router buffer to be transmitted?",
-    secenekler: ["Transmission (d_trans)", "Queuing (d_queue)", "Propagation (d_prop)", "Processing (d_proc)"],
-    dogru: 1,
+    secenekler: ["Propagation (d_prop)", "Processing (d_proc)", "Queuing (d_queue)", "Transmission (d_trans)"],
+    dogru: 2,
     aciklama: "Queuing delay (d_queue) occurs when a packet waits in line on the output link to be transmitted."
   },
   {
     soru: "What happens to an idle circuit in circuit switching?",
-    secenekler: ["It is given to other users", "It stays idle and wastes resources", "It is automatically deleted", "It converts to packet switching"],
-    dogru: 1,
+    secenekler: ["It converts to packet switching", "It is automatically deleted", "It is given to other users", "It stays idle and wastes resources"],
+    dogru: 3,
     aciklama: "In circuit switching, resources are reserved in advance. An unused circuit sits idle — this is its biggest disadvantage."
   },
   {
     soru: "Which layer does TCP belong to in the Internet protocol stack?",
-    secenekler: ["Application layer", "Network layer", "Transport layer", "Data link layer"],
-    dogru: 2,
+    secenekler: ["Data link layer", "Transport layer", "Application layer", "Network layer"],
+    dogru: 1,
     aciklama: "TCP (Transmission Control Protocol) operates at the transport layer, providing reliable process-to-process data transfer."
   },
   {
     soru: "What happens when traffic intensity (La/R) approaches 1?",
-    secenekler: ["Delay approaches zero", "Bandwidth increases", "Queuing delay approaches infinity", "Packet loss resets to zero"],
-    dogru: 2,
+    secenekler: ["Packet loss resets to zero", "Queuing delay approaches infinity", "Delay approaches zero", "Bandwidth increases"],
+    dogru: 1,
     aciklama: "As La/R → 1, average queuing delay grows very large. When La/R > 1, the system becomes overloaded."
+  },
+  {
+    soru: "Which switching method breaks data into small units and routes each one independently through the network?",
+    secenekler: ["Circuit switching", "Packet switching", "Message switching", "Virtual circuit switching"],
+    dogru: 1,
+    aciklama: "Packet switching divides data into packets that are independently routed through the network, enabling better resource utilization."
+  },
+  {
+    soru: "What is the formula for transmission delay?",
+    secenekler: ["d_trans = d / s", "d_trans = L × a / R", "d_trans = L / R", "d_trans = R / L"],
+    dogru: 2,
+    aciklama: "Transmission delay = L (packet length in bits) / R (link bandwidth in bps). It is the time to push all bits onto the wire."
+  },
+  {
+    soru: "What does the acronym 'ISP' stand for?",
+    secenekler: ["Internal Service Provider", "Internet Service Protocol", "Internet Service Provider", "Integrated System Platform"],
+    dogru: 2,
+    aciklama: "ISP stands for Internet Service Provider — the company that gives you access to the Internet (e.g., your home broadband provider)."
+  },
+  {
+    soru: "Which layer of the Internet protocol stack handles routing of datagrams from source to destination?",
+    secenekler: ["Physical layer", "Application layer", "Transport layer", "Network layer"],
+    dogru: 3,
+    aciklama: "The network layer (IP) is responsible for logical addressing and routing packets across multiple networks."
+  },
+  {
+    soru: "What is propagation delay?",
+    secenekler: ["Time for the router to process a packet header", "Time to push all packet bits onto the link", "Time a packet waits in the output queue", "Time for a bit to travel from one router to the next"],
+    dogru: 3,
+    aciklama: "Propagation delay = d / s, where d is the distance and s is the propagation speed of the medium (~2×10⁸ m/s in copper)."
+  },
+  {
+    soru: "Which attack floods a server with fake SYN requests to exhaust its resources?",
+    secenekler: ["Packet sniffing", "IP spoofing", "SYN flood (DoS)", "Man-in-the-middle"],
+    dogru: 2,
+    aciklama: "A SYN flood attack sends massive numbers of half-open TCP connection requests, consuming server memory and preventing legitimate connections."
+  },
+  {
+    soru: "In the Internet protocol stack, which layer is responsible for reliable, in-order delivery of data?",
+    secenekler: ["Network layer", "Transport layer", "Data link layer", "Application layer"],
+    dogru: 1,
+    aciklama: "The transport layer (TCP) provides reliable, in-order byte-stream delivery between processes. UDP at the same layer is unreliable."
+  },
+  {
+    soru: "What does 'store-and-forward' mean in packet switching?",
+    secenekler: ["Each packet is encrypted before forwarding", "The router must receive the entire packet before forwarding it", "Packets are stored on disk before transmission", "Data is forwarded bit-by-bit without buffering"],
+    dogru: 1,
+    aciklama: "Store-and-forward means the router must receive the complete packet before it can begin transmitting it on the outgoing link."
+  },
+  {
+    soru: "Which protocol is used at the application layer for web page transfers?",
+    secenekler: ["FTP", "SMTP", "DNS", "HTTP"],
+    dogru: 3,
+    aciklama: "HTTP (HyperText Transfer Protocol) is the application-layer protocol used by web browsers and servers to exchange web pages."
+  },
+  {
+    soru: "What is the purpose of DNS in computer networks?",
+    secenekler: ["Assign IP addresses to devices automatically", "Encrypt data between hosts", "Translate domain names to IP addresses", "Route packets between networks"],
+    dogru: 2,
+    aciklama: "DNS (Domain Name System) translates human-readable hostnames (e.g., www.example.com) into IP addresses that routers can use."
+  },
+  {
+    soru: "Which of the following best describes 'bandwidth' in networking?",
+    secenekler: ["The distance data can travel", "The maximum data transfer rate of a link", "The time to transmit one packet", "The number of hops between two hosts"],
+    dogru: 1,
+    aciklama: "Bandwidth (link capacity) is the maximum rate at which data can be sent over a communication link, measured in bits per second (bps)."
+  },
+  {
+    soru: "What is the main advantage of packet switching over circuit switching?",
+    secenekler: ["Guaranteed quality of service", "Fixed end-to-end delay", "Better sharing of network resources", "Dedicated path for each connection"],
+    dogru: 2,
+    aciklama: "Packet switching allows many users to share the same links simultaneously, making much more efficient use of network resources than dedicated circuits."
+  },
+  {
+    soru: "Which physical media uses light pulses to transmit data?",
+    secenekler: ["Twisted-pair copper wire", "Coaxial cable", "Fiber-optic cable", "Wireless radio"],
+    dogru: 2,
+    aciklama: "Fiber-optic cables transmit data as pulses of light, offering very high bandwidth and low signal loss over long distances."
+  },
+  {
+    soru: "What is the role of the 'physical layer' in the Internet protocol stack?",
+    secenekler: ["Providing reliable end-to-end data transfer", "Routing packets between networks", "Moving individual bits over the physical medium", "Defining application protocols like HTTP"],
+    dogru: 2,
+    aciklama: "The physical layer deals with transmitting raw bits over a communication channel — e.g., encoding 0s and 1s as electrical or optical signals."
+  },
+  {
+    soru: "In a packet-switched network, what happens when the output buffer is full?",
+    secenekler: ["The network automatically expands its capacity", "The router requests more bandwidth", "Arriving packets may be dropped (packet loss)", "Packets are rerouted through a different path automatically"],
+    dogru: 2,
+    aciklama: "When a router's output buffer is full, arriving packets have no place to wait and are dropped — this is known as packet loss."
+  },
+  {
+    soru: "Which of the following is a characteristic of the 'end-to-end principle' in Internet design?",
+    secenekler: ["Complex intelligence is placed in the network core", "All routers perform deep packet inspection", "Functionality is implemented at the end hosts, keeping the core simple", "ISPs are responsible for data reliability"],
+    dogru: 2,
+    aciklama: "The end-to-end principle states that complex functions (like reliability and encryption) should be handled by end hosts, while the network core remains simple and fast."
   }
 ];
 
