@@ -5,7 +5,7 @@
 **Authors**
 
 * Harun Yetkin (22091015)
-* Kadir Kızilyaprak (22091014)
+* Kadir Kızılyaprak (22091014)
 
 **University:** Yıldız Technical University
 **Department:** CEIT, 3rd Year
