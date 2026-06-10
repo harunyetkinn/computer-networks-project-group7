@@ -10,6 +10,7 @@
 **University:** Yıldız Technical University
 **Department:** CEIT, 3rd Year
 **Group:** 7
+Video Link: https://drive.google.com/drive/folders/1OJxVIGktoC05ngCCB1Vfy3AgApcEe4P7?usp=sharing
 
 ---
 
